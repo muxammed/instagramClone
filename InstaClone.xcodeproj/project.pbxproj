@@ -13,6 +13,18 @@
 		13467D8D28FF882400C30B07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13467D8B28FF882400C30B07 /* Main.storyboard */; };
 		13467D8F28FF882800C30B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13467D8E28FF882800C30B07 /* Assets.xcassets */; };
 		13467D9228FF882800C30B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13467D9028FF882800C30B07 /* LaunchScreen.storyboard */; };
+		135DCC932903F122007D281F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135DCC912903F122007D281F /* PostTableViewCell.swift */; };
+		135DCC942903F122007D281F /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135DCC922903F122007D281F /* PostTableViewCell.xib */; };
+		135DCC972903F558007D281F /* LentaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135DCC952903F558007D281F /* LentaTableViewCell.swift */; };
+		135DCC982903F559007D281F /* LentaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135DCC962903F558007D281F /* LentaTableViewCell.xib */; };
+		135DCC9A2904190F007D281F /* Lenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135DCC992904190F007D281F /* Lenta.swift */; };
+		13816431290611DF007F748D /* UIView+BezierPathBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816430290611DF007F748D /* UIView+BezierPathBorder.swift */; };
+		1381643329061AAE007F748D /* BorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1381643229061AAE007F748D /* BorderedImageView.swift */; };
+		1381643629066005007F748D /* RecommendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1381643429066005007F748D /* RecommendsTableViewCell.swift */; };
+		1381643729066005007F748D /* RecommendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1381643529066005007F748D /* RecommendsTableViewCell.xib */; };
+		138164392906617C007F748D /* RecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138164382906617C007F748D /* RecommendView.swift */; };
+		13CE156829034CB300CA94A5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE156729034CB300CA94A5 /* Post.swift */; };
+		13DB351A290361DC000D802E /* LentaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB3519290361DC000D802E /* LentaItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		13467D8E28FF882800C30B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13467D9128FF882800C30B07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13467D9328FF882800C30B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		135DCC912903F122007D281F /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		135DCC922903F122007D281F /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		135DCC952903F558007D281F /* LentaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaTableViewCell.swift; sourceTree = "<group>"; };
+		135DCC962903F558007D281F /* LentaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LentaTableViewCell.xib; sourceTree = "<group>"; };
+		135DCC992904190F007D281F /* Lenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lenta.swift; sourceTree = "<group>"; };
+		13816430290611DF007F748D /* UIView+BezierPathBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPathBorder.swift"; sourceTree = "<group>"; };
+		1381643229061AAE007F748D /* BorderedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedImageView.swift; sourceTree = "<group>"; };
+		1381643429066005007F748D /* RecommendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendsTableViewCell.swift; sourceTree = "<group>"; };
+		1381643529066005007F748D /* RecommendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendsTableViewCell.xib; sourceTree = "<group>"; };
+		138164382906617C007F748D /* RecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendView.swift; sourceTree = "<group>"; };
+		13CE156729034CB300CA94A5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		13DB3519290361DC000D802E /* LentaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,8 @@
 		13467D8428FF882400C30B07 /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
+				13CE156629034CA000CA94A5 /* Models */,
+				13CE155F2903471100CA94A5 /* Views */,
 				13467D8528FF882400C30B07 /* AppDelegate.swift */,
 				13467D8728FF882400C30B07 /* SceneDelegate.swift */,
 				13467D8928FF882400C30B07 /* ViewController.swift */,
@@ -63,8 +89,42 @@
 				13467D8E28FF882800C30B07 /* Assets.xcassets */,
 				13467D9028FF882800C30B07 /* LaunchScreen.storyboard */,
 				13467D9328FF882800C30B07 /* Info.plist */,
+				13816430290611DF007F748D /* UIView+BezierPathBorder.swift */,
 			);
 			path = InstaClone;
+			sourceTree = "<group>";
+		};
+		135DCC9B29041A28007D281F /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				1381643529066005007F748D /* RecommendsTableViewCell.xib */,
+				135DCC922903F122007D281F /* PostTableViewCell.xib */,
+				135DCC962903F558007D281F /* LentaTableViewCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		13CE155F2903471100CA94A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				135DCC9B29041A28007D281F /* Xibs */,
+				13DB3519290361DC000D802E /* LentaItem.swift */,
+				135DCC912903F122007D281F /* PostTableViewCell.swift */,
+				135DCC952903F558007D281F /* LentaTableViewCell.swift */,
+				1381643229061AAE007F748D /* BorderedImageView.swift */,
+				1381643429066005007F748D /* RecommendsTableViewCell.swift */,
+				138164382906617C007F748D /* RecommendView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13CE156629034CA000CA94A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13CE156729034CB300CA94A5 /* Post.swift */,
+				135DCC992904190F007D281F /* Lenta.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +188,10 @@
 			files = (
 				13467D9228FF882800C30B07 /* LaunchScreen.storyboard in Resources */,
 				13467D8F28FF882800C30B07 /* Assets.xcassets in Resources */,
+				1381643729066005007F748D /* RecommendsTableViewCell.xib in Resources */,
 				13467D8D28FF882400C30B07 /* Main.storyboard in Resources */,
+				135DCC942903F122007D281F /* PostTableViewCell.xib in Resources */,
+				135DCC982903F559007D281F /* LentaTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,9 +223,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1381643629066005007F748D /* RecommendsTableViewCell.swift in Sources */,
+				135DCC972903F558007D281F /* LentaTableViewCell.swift in Sources */,
+				1381643329061AAE007F748D /* BorderedImageView.swift in Sources */,
 				13467D8A28FF882400C30B07 /* ViewController.swift in Sources */,
 				13467D8628FF882400C30B07 /* AppDelegate.swift in Sources */,
+				135DCC9A2904190F007D281F /* Lenta.swift in Sources */,
 				13467D8828FF882400C30B07 /* SceneDelegate.swift in Sources */,
+				138164392906617C007F748D /* RecommendView.swift in Sources */,
+				13DB351A290361DC000D802E /* LentaItem.swift in Sources */,
+				13816431290611DF007F748D /* UIView+BezierPathBorder.swift in Sources */,
+				13CE156829034CB300CA94A5 /* Post.swift in Sources */,
+				135DCC932903F122007D281F /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
