@@ -31,6 +31,8 @@
 		138164392906617C007F748D /* RecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138164382906617C007F748D /* RecommendView.swift */; };
 		13CE156829034CB300CA94A5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE156729034CB300CA94A5 /* Post.swift */; };
 		13DB351A290361DC000D802E /* LentaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB3519290361DC000D802E /* LentaItem.swift */; };
+		13FCB53A29102F7400348E60 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13FCB53929102F7400348E60 /* Colors.xcassets */; };
+		13FCB53C29102FC800348E60 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FCB53B29102FC800348E60 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		138164382906617C007F748D /* RecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendView.swift; sourceTree = "<group>"; };
 		13CE156729034CB300CA94A5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		13DB3519290361DC000D802E /* LentaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaItem.swift; sourceTree = "<group>"; };
+		13FCB53929102F7400348E60 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		13FCB53B29102FC800348E60 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				13467D9028FF882800C30B07 /* LaunchScreen.storyboard */,
 				13467D9328FF882800C30B07 /* Info.plist */,
 				13816430290611DF007F748D /* UIView+BezierPathBorder.swift */,
+				13FCB53929102F7400348E60 /* Colors.xcassets */,
 			);
 			path = InstaClone;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				13CE156729034CB300CA94A5 /* Post.swift */,
 				135DCC992904190F007D281F /* Lenta.swift */,
 				133FB068290F963300BD28D7 /* Action.swift */,
+				13FCB53B29102FC800348E60 /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13FCB53A29102F7400348E60 /* Colors.xcassets in Resources */,
 				13467D9228FF882800C30B07 /* LaunchScreen.storyboard in Resources */,
 				13467D8F28FF882800C30B07 /* Assets.xcassets in Resources */,
 				1381643729066005007F748D /* RecommendsTableViewCell.xib in Resources */,
@@ -252,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				130F3BB2290F18C900BB80F6 /* ActionsViewController.swift in Sources */,
+				13FCB53C29102FC800348E60 /* Constants.swift in Sources */,
 				1381643629066005007F748D /* RecommendsTableViewCell.swift in Sources */,
 				133FB06D290F978600BD28D7 /* FollowActionCell.swift in Sources */,
 				135DCC972903F558007D281F /* LentaTableViewCell.swift in Sources */,

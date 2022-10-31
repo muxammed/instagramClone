@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     // MARK: - Visual components
     @IBOutlet weak var mainTabTableView: UITableView!
     
-    // MARK: - Public properties
-    var recomends = ["rec1", "rec2", "rec3", "rec4", "rec5"]
-    var lentas = [Lenta(userName: "Ваша история", userImage: "user1"),
+    // MARK: - Private properties
+    private var recomends = ["rec1", "rec2", "rec3", "rec4", "rec5"]
+    private var lentas = [Lenta(userName: "Ваша история", userImage: "user1"),
                   Lenta(userName: "sivak1554", userImage: "user2"),
                   Lenta(userName: "spinova_20.05", userImage: "user3"),
                   Lenta(userName: "selivanov_sergey", userImage: "user4"),
@@ -23,9 +23,10 @@ class ViewController: UIViewController {
                   Lenta(userName: "yesho_kto", userImage: "user6"),
                   Lenta(userName: "dragon", userImage: "user7"),
                   Lenta(userName: "hitman89", userImage: "user8")]
-    var posts: [Post] = []
-    var recommends: [Lenta] = []
+    private var posts: [Post] = []
+    private var recommends: [Lenta] = []
     
+    // MARK: - Lify Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()

@@ -15,7 +15,7 @@ final class RecommendsTableViewCell: UITableViewCell {
     
     // MARK: - Public properties
     static let identifier = "RecommendsTableViewCell"
-    var recommends: [Lenta] = []
+    private var recommends: [Lenta] = []
     
     // MARK: - Public methods
     static func nib() -> UINib {
@@ -43,8 +43,7 @@ final class RecommendsTableViewCell: UITableViewCell {
             let item = RecommendView(frame: .zero)
             item.translatesAutoresizingMaskIntoConstraints = false
             let lenta = recommends[index]
-            item.userName.text = lenta.userName
-            item.userImageView.image = UIImage(named: lenta.userImage)
+            item.configure(with: lenta)
             let itemWidth = CGFloat(UIScreen.main.bounds.width / 1.8)
             
             NSLayoutConstraint.activate([

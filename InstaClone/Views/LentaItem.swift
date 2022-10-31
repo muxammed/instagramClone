@@ -10,37 +10,38 @@ import UIKit
 final class LentaItem: UIView {
     
     // MARK: - Visual components
-    let userImage: UIImageView = {
+    private let userImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
     }()
     
-    let plusView: BorderedImageView = {
+    private let plusView: BorderedImageView = {
         let view = BorderedImageView()
-        view.backgroundColor = UIColor(red: 51/255, green: 150/255, blue: 254/255, alpha: 1)
+        view.backgroundColor = UIColor(named: Constants.plusViewBackgroundColor)
         view.gradientColors = [.black, .black]
         view.layer.borderWidth = 2.5
         view.isHidden = true
         return view
     }()
-    let plusImageView: UIImageView = {
+    private let plusImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "plus")
+        imageView.image = UIImage(named: Constants.plusImageName)
         imageView.contentMode = .scaleAspectFit
         imageView.tintColor = .white
         return imageView
     }()
     
-    let circleView: BorderedImageView = {
+    private let circleView: BorderedImageView = {
         let view = BorderedImageView()
-        view.gradientColors = [UIColor(red: 202/255, green: 146 / 255, blue: 82/255, alpha: 1.0), .purple]
+        let startColor = UIColor(named: Constants.borderImageViewBackColor) ?? UIColor.red
+        view.gradientColors = [startColor, .purple]
         view.layer.borderWidth = 2.5
         return view
     }()
     
-    let userName: UILabel = {
+    private let userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
@@ -52,7 +53,7 @@ final class LentaItem: UIView {
     // MARK: - Life cycle
     override func layoutSubviews() {
         super.layoutSubviews()
-        userImage.layer.cornerRadius = (frame.width - 24) / 2
+        userImageView.layer.cornerRadius = (frame.width - 24) / 2
         plusView.layer.cornerRadius = plusView.frame.width / 2
     }
     
@@ -66,14 +67,69 @@ final class LentaItem: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public methods
+    public func configure(with lenta: Lenta, withPlus: Bool) {
+        userNameLabel.text = lenta.userName
+        userImageView.image = UIImage(named: lenta.userImage)
+        if withPlus {
+            userNameLabel.font = UIFont.systemFont(ofSize: userNameLabel.font.pointSize, weight: .regular)
+            plusView.isHidden = false
+            circleView.gradientColors = [.clear, .clear]
+        }
+    }
+    
     // MARK: - Private methods
     private func setupView() {
         addSubview(circleView)
-        circleView.addSubview(userImage)
-        addSubview(userName)
+        circleView.addSubview(userImageView)
+        addSubview(userNameLabel)
         addSubview(plusView)
         plusView.addSubview(plusImageView)
         setupLayout()
+    }
+    
+    private func circleViewConstraints() {
+        NSLayoutConstraint.activate([
+            circleView.topAnchor.constraint(equalTo: topAnchor, constant: 2),
+            circleView.widthAnchor.constraint(equalTo: widthAnchor, constant: -12),
+            circleView.heightAnchor.constraint(equalTo: circleView.widthAnchor),
+            circleView.centerXAnchor.constraint(equalTo: centerXAnchor),
+        ])
+    }
+    
+    private func userImageViewConstraints() {
+        NSLayoutConstraint.activate([
+            userImageView.widthAnchor.constraint(equalTo: circleView.widthAnchor, constant: -10),
+            userImageView.heightAnchor.constraint(equalTo: userImageView.widthAnchor),
+            userImageView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
+            userImageView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
+        ])
+    }
+    
+    private func userNameLabelConstraints() {
+        NSLayoutConstraint.activate([
+            userNameLabel.topAnchor.constraint(equalTo: userImageView.bottomAnchor, constant: 8),
+            userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2),
+            userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2),
+        ])
+    }
+    
+    private func plusViewConstraints() {
+        NSLayoutConstraint.activate([
+            plusView.centerYAnchor.constraint(equalTo: userImageView.bottomAnchor, constant: -5),
+            plusView.centerXAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: -7),
+            plusView.widthAnchor.constraint(equalToConstant: 24),
+            plusView.heightAnchor.constraint(equalToConstant: 24),
+        ])
+    }
+    
+    private func plusImageViewConstraints() {
+        NSLayoutConstraint.activate([
+            plusImageView.centerXAnchor.constraint(equalTo: plusView.centerXAnchor),
+            plusImageView.centerYAnchor.constraint(equalTo: plusView.centerYAnchor),
+            plusImageView.widthAnchor.constraint(equalToConstant: 11),
+            plusImageView.heightAnchor.constraint(equalToConstant: 11)
+        ])
     }
     
     private func setupLayout() {
@@ -81,35 +137,14 @@ final class LentaItem: UIView {
         plusView.translatesAutoresizingMaskIntoConstraints = false
         plusImageView.translatesAutoresizingMaskIntoConstraints = false
         circleView.translatesAutoresizingMaskIntoConstraints = false
-        userImage.translatesAutoresizingMaskIntoConstraints = false
-        userName.translatesAutoresizingMaskIntoConstraints = false
+        userImageView.translatesAutoresizingMaskIntoConstraints = false
+        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            
-            circleView.topAnchor.constraint(equalTo: topAnchor, constant: 2),
-            circleView.widthAnchor.constraint(equalTo: widthAnchor, constant: -12),
-            circleView.heightAnchor.constraint(equalTo: circleView.widthAnchor),
-            circleView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
-            userImage.widthAnchor.constraint(equalTo: circleView.widthAnchor, constant: -10),
-            userImage.heightAnchor.constraint(equalTo: userImage.widthAnchor),
-            userImage.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
-            userImage.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
-            
-            userName.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 8),
-            userName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2),
-            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2),
-            
-            plusView.centerYAnchor.constraint(equalTo: userImage.bottomAnchor, constant: -5),
-            plusView.centerXAnchor.constraint(equalTo: userImage.trailingAnchor, constant: -7),
-            plusView.widthAnchor.constraint(equalToConstant: 24),
-            plusView.heightAnchor.constraint(equalToConstant: 24),
-            
-            plusImageView.centerXAnchor.constraint(equalTo: plusView.centerXAnchor),
-            plusImageView.centerYAnchor.constraint(equalTo: plusView.centerYAnchor),
-            plusImageView.widthAnchor.constraint(equalToConstant: 11),
-            plusImageView.heightAnchor.constraint(equalToConstant: 11)
-        ])
+        circleViewConstraints()
+        userImageViewConstraints()
+        userNameLabelConstraints()
+        plusViewConstraints()
+        plusImageViewConstraints()
         layoutSubviews()
     }
 }

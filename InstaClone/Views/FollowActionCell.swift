@@ -43,7 +43,6 @@ final class FollowActionCell: UITableViewCell {
         followButton.backgroundColor = .clear
         followButton.layer.borderWidth = 1.5
         followButton.layer.cornerRadius = 5
-        
         followButton.configuration = followedButtonConfiguration
     }
     

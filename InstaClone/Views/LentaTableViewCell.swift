@@ -42,15 +42,8 @@ final class LentaTableViewCell: UITableViewCell {
             let item = LentaItem(frame: .zero)
             item.translatesAutoresizingMaskIntoConstraints = false
             let lenta = lentas[index]
-            item.userName.text = lenta.userName
-            item.userImage.image = UIImage(named: lenta.userImage)
+            item.configure(with: lenta, withPlus: index == 0 ? true : false)
             let itemWidth = CGFloat(UIScreen.main.bounds.width / 4.6)
-            if index == 0 {
-                item.userName.font = UIFont.systemFont(ofSize: item.userName.font.pointSize, weight: .regular)
-                item.plusView.isHidden = false
-                item.circleView.gradientColors = [.clear, .clear]
-            }
-            
             NSLayoutConstraint.activate([
                 item.widthAnchor.constraint(equalToConstant: itemWidth),
                 item.heightAnchor.constraint(equalTo: item.widthAnchor, multiplier: 1.2),

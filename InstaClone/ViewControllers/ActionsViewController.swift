@@ -11,11 +11,11 @@ final class ActionsViewController: UIViewController {
     
     // MARK: - Visual components
     @IBOutlet weak var tableView: UITableView!
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
-    // MARK: - Public properties
-    var clearItems = false
-    var lentas = [Lenta(userName: "Ваша история", userImage: "user1"),
+    // MARK: - Private properties
+    private var clearItems = false
+    private var lentas = [Lenta(userName: "Ваша история", userImage: "user1"),
                   Lenta(userName: "sivak1554", userImage: "user2"),
                   Lenta(userName: "spinova_20.05", userImage: "user3"),
                   Lenta(userName: "selivanov_sergey", userImage: "user4"),
@@ -23,8 +23,8 @@ final class ActionsViewController: UIViewController {
                   Lenta(userName: "yesho_kto", userImage: "user6"),
                   Lenta(userName: "dragon", userImage: "user7"),
                   Lenta(userName: "hitman89", userImage: "user8")]
-    var sections = ["Сегодня", "На этой неделе"]
-    lazy var actions = [
+    private var sections = ["Сегодня", "На этой неделе"]
+    private lazy var actions = [
         [
             Action(actionText: "упомянул(-а) вас в комментарии: @evgeny_zverik спасибо)",
                 actionUser: lentas[1],
@@ -143,7 +143,7 @@ final class ActionsViewController: UIViewController {
         ]
     ]
     
-    // MARK: - Initialisators
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
