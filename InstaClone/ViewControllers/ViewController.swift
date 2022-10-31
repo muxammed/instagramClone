@@ -7,14 +7,15 @@
 
 import UIKit
 
-/// ViewController
+/// ViewController - экран главный с лентой и постами
 class ViewController: UIViewController {
 
+    // MARK: - Visual components
     @IBOutlet weak var mainTabTableView: UITableView!
     
-    var recomends = ["rec1", "rec2", "rec3", "rec4", "rec5"]
-    
-    var lentas = [Lenta(userName: "Ваша история", userImage: "user1"),
+    // MARK: - Private properties
+    private var recomends = ["rec1", "rec2", "rec3", "rec4", "rec5"]
+    private var lentas = [Lenta(userName: "Ваша история", userImage: "user1"),
                   Lenta(userName: "sivak1554", userImage: "user2"),
                   Lenta(userName: "spinova_20.05", userImage: "user3"),
                   Lenta(userName: "selivanov_sergey", userImage: "user4"),
@@ -22,8 +23,30 @@ class ViewController: UIViewController {
                   Lenta(userName: "yesho_kto", userImage: "user6"),
                   Lenta(userName: "dragon", userImage: "user7"),
                   Lenta(userName: "hitman89", userImage: "user8")]
-    var posts: [Post] = []
-    var recommends: [Lenta] = []
+    private var posts: [Post] = []
+    private var recommends: [Lenta] = []
+    
+    // MARK: - Lify Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure()
+    }
+    
+    // MARK: - Private methods
+    private func configure() {
+        loadPosts()
+        navigationController?.navigationBar.backgroundColor = .black
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = .black
+        
+        mainTabTableView.rowHeight = UITableView.automaticDimension
+        mainTabTableView.estimatedRowHeight = 100
+        
+        mainTabTableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
+        mainTabTableView.register(LentaTableViewCell.nib(), forCellReuseIdentifier: LentaTableViewCell.identifier)
+        mainTabTableView.register(RecommendsTableViewCell.nib(),
+                                  forCellReuseIdentifier: RecommendsTableViewCell.identifier)
+    }
     
     private func loadPosts() {
         var post = Post(postName: "cardinalartur", postImage: "post2",
@@ -46,30 +69,12 @@ class ViewController: UIViewController {
         
         recommends = lentas.reversed()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        loadPosts()
-        navigationController?.navigationBar.backgroundColor = .black
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .black
-        
-        mainTabTableView.rowHeight = UITableView.automaticDimension
-        mainTabTableView.estimatedRowHeight = 100
-        mainTabTableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
-        mainTabTableView.register(LentaTableViewCell.nib(), forCellReuseIdentifier: LentaTableViewCell.identifier)
-        mainTabTableView.register(RecommendsTableViewCell.nib(),
-                                  forCellReuseIdentifier: RecommendsTableViewCell.identifier)
-    }
-
 }
 
+/// UITableViewDelegate, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        print("ROW \(indexPath.row)")
         
         if indexPath.row == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: LentaTableViewCell.identifier,
@@ -106,4 +111,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let lenta = lentas.count == 0 ? 0 : 1
         return posts.count + lenta + 1
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return UITableView.automaticDimension
+    }
+    
 }

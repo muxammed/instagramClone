@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecommendsTableViewCell" rowHeight="256" id="KGk-i7-Jjw" customClass="RecommendsTableViewCell" customModule="InstaClone" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecommendsTableViewCell" rowHeight="200" id="KGk-i7-Jjw" customClass="RecommendsTableViewCell" customModule="InstaClone" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="518" height="256"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="518" height="256"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QS-XN-ZYA">
-                        <rect key="frame" x="437" y="9" width="60" height="28"/>
+                        <rect key="frame" x="455" y="9" width="60" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="gT8-B7-cKa"/>
                             <constraint firstAttribute="height" constant="28" id="smz-yE-181"/>
@@ -36,26 +36,26 @@
                             <attributedString key="attributedTitle">
                                 <fragment content="все">
                                     <attributes>
-                                        <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                        <font key="NSFont" size="21" name="Helvetica-Bold"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>
                         </buttonConfiguration>
                     </button>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="bkF-ur-i81">
-                        <rect key="frame" x="0.0" y="42" width="518" height="214"/>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="bkF-ur-i81">
+                        <rect key="frame" x="0.0" y="52" width="518" height="185"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-yh-atY">
-                                <rect key="frame" x="0.0" y="0.0" width="518" height="214"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-yh-atY">
+                                <rect key="frame" x="0.0" y="0.0" width="518" height="185"/>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="DMo-yh-atY" firstAttribute="top" secondItem="bkF-ur-i81" secondAttribute="top" id="KOV-a7-ppU"/>
-                            <constraint firstItem="DMo-yh-atY" firstAttribute="trailing" secondItem="bkF-ur-i81" secondAttribute="trailing" constant="518" id="TKL-9g-MdO"/>
-                            <constraint firstItem="DMo-yh-atY" firstAttribute="leading" secondItem="bkF-ur-i81" secondAttribute="leading" id="YXU-vF-cb5"/>
-                            <constraint firstItem="DMo-yh-atY" firstAttribute="bottom" secondItem="bkF-ur-i81" secondAttribute="bottom" constant="214" id="Z6z-o9-PBp"/>
-                            <constraint firstItem="DMo-yh-atY" firstAttribute="height" secondItem="bkF-ur-i81" secondAttribute="height" id="rz6-Ty-kJe"/>
+                            <constraint firstItem="DMo-yh-atY" firstAttribute="leading" secondItem="Nab-rz-TfG" secondAttribute="leading" id="1At-QE-Zew"/>
+                            <constraint firstItem="DMo-yh-atY" firstAttribute="top" secondItem="mLs-T8-wQu" secondAttribute="top" id="9aK-Z1-jb6"/>
+                            <constraint firstItem="DMo-yh-atY" firstAttribute="trailing" secondItem="Nab-rz-TfG" secondAttribute="trailing" id="Vsl-E3-3JG"/>
+                            <constraint firstItem="DMo-yh-atY" firstAttribute="height" secondItem="mLs-T8-wQu" secondAttribute="height" id="l07-Mj-MdW"/>
+                            <constraint firstItem="DMo-yh-atY" firstAttribute="bottom" secondItem="mLs-T8-wQu" secondAttribute="bottom" id="r3e-tc-fOe"/>
                         </constraints>
                         <viewLayoutGuide key="contentLayoutGuide" id="Nab-rz-TfG"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="mLs-T8-wQu"/>
@@ -64,14 +64,14 @@
                 <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="OuK-td-EvF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="2hA-ln-6gZ"/>
-                    <constraint firstAttribute="trailing" secondItem="6QS-XN-ZYA" secondAttribute="trailing" constant="21" id="3VY-o5-vz1"/>
-                    <constraint firstAttribute="bottom" secondItem="bkF-ur-i81" secondAttribute="bottom" id="HSa-gi-EPE"/>
+                    <constraint firstAttribute="trailing" secondItem="6QS-XN-ZYA" secondAttribute="trailing" constant="3" id="3VY-o5-vz1"/>
+                    <constraint firstAttribute="bottom" secondItem="bkF-ur-i81" secondAttribute="bottom" constant="10" id="HSa-gi-EPE"/>
                     <constraint firstItem="bkF-ur-i81" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="bCm-er-sgu"/>
                     <constraint firstItem="OuK-td-EvF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="cQb-IT-WyK"/>
                     <constraint firstAttribute="trailing" secondItem="bkF-ur-i81" secondAttribute="trailing" id="gk0-Y7-Rrb"/>
                     <constraint firstItem="OuK-td-EvF" firstAttribute="centerY" secondItem="6QS-XN-ZYA" secondAttribute="centerY" id="nbL-vk-yKe"/>
                     <constraint firstItem="bkF-ur-i81" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="quM-7I-fMV"/>
-                    <constraint firstItem="bkF-ur-i81" firstAttribute="top" secondItem="OuK-td-EvF" secondAttribute="bottom" constant="8" symbolic="YES" id="uU0-IO-3BZ"/>
+                    <constraint firstItem="bkF-ur-i81" firstAttribute="top" secondItem="OuK-td-EvF" secondAttribute="bottom" constant="18" id="uU0-IO-3BZ"/>
                     <constraint firstItem="6QS-XN-ZYA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="zXs-FW-fBK"/>
                 </constraints>
             </tableViewCellContentView>

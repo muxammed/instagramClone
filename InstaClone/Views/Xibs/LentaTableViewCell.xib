@@ -26,7 +26,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nzL-yy-lF1" firstAttribute="bottom" secondItem="jsb-rv-JBU" secondAttribute="bottom" constant="100" id="2E0-dz-y8c"/>
+                            <constraint firstItem="nzL-yy-lF1" firstAttribute="bottom" secondItem="jsb-rv-JBU" secondAttribute="bottom" id="2E0-dz-y8c"/>
                             <constraint firstItem="nzL-yy-lF1" firstAttribute="top" secondItem="jsb-rv-JBU" secondAttribute="top" id="7Ec-16-IJS"/>
                             <constraint firstItem="nzL-yy-lF1" firstAttribute="height" secondItem="Sc9-60-ieS" secondAttribute="height" id="H5i-yX-gRt"/>
                             <constraint firstItem="jsb-rv-JBU" firstAttribute="trailing" secondItem="nzL-yy-lF1" secondAttribute="trailing" id="MH5-SH-IM6"/>

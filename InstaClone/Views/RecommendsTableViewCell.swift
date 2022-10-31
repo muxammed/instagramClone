@@ -9,14 +9,21 @@ import UIKit
 /// RecommendsTableViewCell ячейка для показа рекомендаций
 final class RecommendsTableViewCell: UITableViewCell {
 
+    // MARK: - Visual components
     @IBOutlet weak var recommendsScrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     
+    // MARK: - Public properties
     static let identifier = "RecommendsTableViewCell"
-    var recommends: [Lenta] = []
+    private var recommends: [Lenta] = []
     
+    // MARK: - Public methods
     static func nib() -> UINib {
         return UINib(nibName: "RecommendsTableViewCell", bundle: nil)
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
     public func configure(with recommends: [Lenta]) {
@@ -26,7 +33,7 @@ final class RecommendsTableViewCell: UITableViewCell {
     
     func configureItems() {
         
-        recommendsScrollView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: -10)
+        recommendsScrollView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10)
         
         for subview in stackView.arrangedSubviews {
             subview.removeFromSuperview()
@@ -36,8 +43,7 @@ final class RecommendsTableViewCell: UITableViewCell {
             let item = RecommendView(frame: .zero)
             item.translatesAutoresizingMaskIntoConstraints = false
             let lenta = recommends[index]
-            item.userName.text = lenta.userName
-            item.userImageView.image = UIImage(named: lenta.userImage)
+            item.configure(with: lenta)
             let itemWidth = CGFloat(UIScreen.main.bounds.width / 1.8)
             
             NSLayoutConstraint.activate([
@@ -50,15 +56,4 @@ final class RecommendsTableViewCell: UITableViewCell {
             
         }
     }
-        
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
