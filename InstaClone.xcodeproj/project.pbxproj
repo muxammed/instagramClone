@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130F3BAD290F08BD00BB80F6 /* PhotoCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130F3BAC290F08BD00BB80F6 /* PhotoCommentCell.xib */; };
+		130F3BAF290F159300BB80F6 /* PhotoCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130F3BAE290F159300BB80F6 /* PhotoCommentCell.swift */; };
+		130F3BB2290F18C900BB80F6 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130F3BB1290F18C900BB80F6 /* ActionsViewController.swift */; };
+		133FB069290F963300BD28D7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FB068290F963300BD28D7 /* Action.swift */; };
+		133FB06B290F976000BD28D7 /* FollowActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133FB06A290F976000BD28D7 /* FollowActionCell.xib */; };
+		133FB06D290F978600BD28D7 /* FollowActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FB06C290F978600BD28D7 /* FollowActionCell.swift */; };
 		13467D8628FF882400C30B07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13467D8528FF882400C30B07 /* AppDelegate.swift */; };
 		13467D8828FF882400C30B07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13467D8728FF882400C30B07 /* SceneDelegate.swift */; };
 		13467D8A28FF882400C30B07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13467D8928FF882400C30B07 /* ViewController.swift */; };
@@ -28,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		130F3BAC290F08BD00BB80F6 /* PhotoCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCommentCell.xib; sourceTree = "<group>"; };
+		130F3BAE290F159300BB80F6 /* PhotoCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCommentCell.swift; sourceTree = "<group>"; };
+		130F3BB1290F18C900BB80F6 /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
+		133FB068290F963300BD28D7 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		133FB06A290F976000BD28D7 /* FollowActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowActionCell.xib; sourceTree = "<group>"; };
+		133FB06C290F978600BD28D7 /* FollowActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowActionCell.swift; sourceTree = "<group>"; };
 		13467D8228FF882400C30B07 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13467D8528FF882400C30B07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13467D8728FF882400C30B07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		130F3BB0290F18A800BB80F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				13467D8928FF882400C30B07 /* ViewController.swift */,
+				130F3BB1290F18C900BB80F6 /* ActionsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		13467D7928FF882400C30B07 = {
 			isa = PBXGroup;
 			children = (
@@ -80,11 +101,11 @@
 		13467D8428FF882400C30B07 /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
+				130F3BB0290F18A800BB80F6 /* ViewControllers */,
 				13CE156629034CA000CA94A5 /* Models */,
 				13CE155F2903471100CA94A5 /* Views */,
 				13467D8528FF882400C30B07 /* AppDelegate.swift */,
 				13467D8728FF882400C30B07 /* SceneDelegate.swift */,
-				13467D8928FF882400C30B07 /* ViewController.swift */,
 				13467D8B28FF882400C30B07 /* Main.storyboard */,
 				13467D8E28FF882800C30B07 /* Assets.xcassets */,
 				13467D9028FF882800C30B07 /* LaunchScreen.storyboard */,
@@ -100,6 +121,8 @@
 				1381643529066005007F748D /* RecommendsTableViewCell.xib */,
 				135DCC922903F122007D281F /* PostTableViewCell.xib */,
 				135DCC962903F558007D281F /* LentaTableViewCell.xib */,
+				130F3BAC290F08BD00BB80F6 /* PhotoCommentCell.xib */,
+				133FB06A290F976000BD28D7 /* FollowActionCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -114,6 +137,8 @@
 				1381643229061AAE007F748D /* BorderedImageView.swift */,
 				1381643429066005007F748D /* RecommendsTableViewCell.swift */,
 				138164382906617C007F748D /* RecommendView.swift */,
+				130F3BAE290F159300BB80F6 /* PhotoCommentCell.swift */,
+				133FB06C290F978600BD28D7 /* FollowActionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +148,7 @@
 			children = (
 				13CE156729034CB300CA94A5 /* Post.swift */,
 				135DCC992904190F007D281F /* Lenta.swift */,
+				133FB068290F963300BD28D7 /* Action.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,7 +216,9 @@
 				13467D8F28FF882800C30B07 /* Assets.xcassets in Resources */,
 				1381643729066005007F748D /* RecommendsTableViewCell.xib in Resources */,
 				13467D8D28FF882400C30B07 /* Main.storyboard in Resources */,
+				130F3BAD290F08BD00BB80F6 /* PhotoCommentCell.xib in Resources */,
 				135DCC942903F122007D281F /* PostTableViewCell.xib in Resources */,
+				133FB06B290F976000BD28D7 /* FollowActionCell.xib in Resources */,
 				135DCC982903F559007D281F /* LentaTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130F3BB2290F18C900BB80F6 /* ActionsViewController.swift in Sources */,
 				1381643629066005007F748D /* RecommendsTableViewCell.swift in Sources */,
+				133FB06D290F978600BD28D7 /* FollowActionCell.swift in Sources */,
 				135DCC972903F558007D281F /* LentaTableViewCell.swift in Sources */,
 				1381643329061AAE007F748D /* BorderedImageView.swift in Sources */,
 				13467D8A28FF882400C30B07 /* ViewController.swift in Sources */,
@@ -231,9 +261,11 @@
 				135DCC9A2904190F007D281F /* Lenta.swift in Sources */,
 				13467D8828FF882400C30B07 /* SceneDelegate.swift in Sources */,
 				138164392906617C007F748D /* RecommendView.swift in Sources */,
+				130F3BAF290F159300BB80F6 /* PhotoCommentCell.swift in Sources */,
 				13DB351A290361DC000D802E /* LentaItem.swift in Sources */,
 				13816431290611DF007F748D /* UIView+BezierPathBorder.swift in Sources */,
 				13CE156829034CB300CA94A5 /* Post.swift in Sources */,
+				133FB069290F963300BD28D7 /* Action.swift in Sources */,
 				135DCC932903F122007D281F /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         
         mainTabTableView.rowHeight = UITableView.automaticDimension
         mainTabTableView.estimatedRowHeight = 100
+        
         mainTabTableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
         mainTabTableView.register(LentaTableViewCell.nib(), forCellReuseIdentifier: LentaTableViewCell.identifier)
         mainTabTableView.register(RecommendsTableViewCell.nib(),
@@ -68,8 +69,6 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        print("ROW \(indexPath.row)")
         
         if indexPath.row == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: LentaTableViewCell.identifier,
@@ -106,4 +105,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let lenta = lentas.count == 0 ? 0 : 1
         return posts.count + lenta + 1
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return UITableView.automaticDimension
+    }
+    
 }

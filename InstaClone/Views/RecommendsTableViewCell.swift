@@ -26,7 +26,7 @@ final class RecommendsTableViewCell: UITableViewCell {
     
     func configureItems() {
         
-        recommendsScrollView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: -10)
+        recommendsScrollView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10)
         
         for subview in stackView.arrangedSubviews {
             subview.removeFromSuperview()
