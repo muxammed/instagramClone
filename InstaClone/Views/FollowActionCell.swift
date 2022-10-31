@@ -6,17 +6,24 @@
 //
 
 import UIKit
-
+/// FollowActionCell - ячейка таблицы действии для отображения подписания и подписанных
 final class FollowActionCell: UITableViewCell {
     
+    // MARK: - Visual components
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var actionText: UILabel!
     @IBOutlet weak var followButton: UIButton!
     
+    // MARK: - Public properties
     static let identifier = "FollowActionCell"
     
+    // MARK: - Public methods
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
     func configure(with action: Action) {
@@ -38,10 +45,6 @@ final class FollowActionCell: UITableViewCell {
         followButton.layer.cornerRadius = 5
         
         followButton.configuration = followedButtonConfiguration
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
     }
     
     private func createAttributedString(_ action: Action) -> NSMutableAttributedString {

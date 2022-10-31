@@ -6,19 +6,12 @@
 //
 
 import UIKit
-
+/// UIImage extension для создания градиент картины
 extension UIImage {
     static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.colors = colors.map(\.cgColor)
-
-        // This makes it left to right, default is top to bottom
-//        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-//        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        
-//        gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
-//        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
         
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
@@ -30,7 +23,7 @@ extension UIImage {
         }
     }
 }
-
+/// extension UIView для создания градиента во вьюв и бордера с градиентом
 extension UIView {
 
     func makeGradient(from: UIColor, to: UIColor) {

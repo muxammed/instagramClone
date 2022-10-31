@@ -7,13 +7,14 @@
 
 import UIKit
 
-/// ViewController
+/// ViewController - экран главный с лентой и постами
 class ViewController: UIViewController {
 
+    // MARK: - Visual components
     @IBOutlet weak var mainTabTableView: UITableView!
     
+    // MARK: - Public properties
     var recomends = ["rec1", "rec2", "rec3", "rec4", "rec5"]
-    
     var lentas = [Lenta(userName: "Ваша история", userImage: "user1"),
                   Lenta(userName: "sivak1554", userImage: "user2"),
                   Lenta(userName: "spinova_20.05", userImage: "user3"),
@@ -24,6 +25,27 @@ class ViewController: UIViewController {
                   Lenta(userName: "hitman89", userImage: "user8")]
     var posts: [Post] = []
     var recommends: [Lenta] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure()
+    }
+    
+    // MARK: - Private methods
+    private func configure() {
+        loadPosts()
+        navigationController?.navigationBar.backgroundColor = .black
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = .black
+        
+        mainTabTableView.rowHeight = UITableView.automaticDimension
+        mainTabTableView.estimatedRowHeight = 100
+        
+        mainTabTableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
+        mainTabTableView.register(LentaTableViewCell.nib(), forCellReuseIdentifier: LentaTableViewCell.identifier)
+        mainTabTableView.register(RecommendsTableViewCell.nib(),
+                                  forCellReuseIdentifier: RecommendsTableViewCell.identifier)
+    }
     
     private func loadPosts() {
         var post = Post(postName: "cardinalartur", postImage: "post2",
@@ -46,26 +68,9 @@ class ViewController: UIViewController {
         
         recommends = lentas.reversed()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        loadPosts()
-        navigationController?.navigationBar.backgroundColor = .black
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .black
-        
-        mainTabTableView.rowHeight = UITableView.automaticDimension
-        mainTabTableView.estimatedRowHeight = 100
-        
-        mainTabTableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
-        mainTabTableView.register(LentaTableViewCell.nib(), forCellReuseIdentifier: LentaTableViewCell.identifier)
-        mainTabTableView.register(RecommendsTableViewCell.nib(),
-                                  forCellReuseIdentifier: RecommendsTableViewCell.identifier)
-    }
-
 }
 
+/// UITableViewDelegate, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

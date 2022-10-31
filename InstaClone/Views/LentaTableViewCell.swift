@@ -10,18 +10,24 @@ import UIKit
 /// LentaTableViewCell - кастомная ячейка для ленты
 final class LentaTableViewCell: UITableViewCell {
 
+    // MARK: - Visual components
     @IBOutlet weak var lentaScrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     
+    // MARK: - Public properties
     private var lentas: [Lenta] = []
-    
     static let identifier = "LentaTableViewCell"
     
+    // MARK: - Public methods
     static func nib() -> UINib {
         return UINib(nibName: "LentaTableViewCell", bundle: nil)
     }
     
-    public func configure(with lentas: [Lenta]) {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func configure(with lentas: [Lenta]) {
         self.lentas = lentas
         configureItems()
     }
@@ -55,14 +61,4 @@ final class LentaTableViewCell: UITableViewCell {
             
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-    
 }

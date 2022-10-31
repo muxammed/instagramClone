@@ -6,9 +6,10 @@
 //
 
 import UIKit
-
+/// LentaItem кастомный вьюв для показа элемента ленты
 final class LentaItem: UIView {
     
+    // MARK: - Visual components
     let userImage: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -48,12 +49,25 @@ final class LentaItem: UIView {
         return label
     }()
     
+    // MARK: - Life cycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        userImage.layer.cornerRadius = (frame.width - 24) / 2
+        plusView.layer.cornerRadius = plusView.frame.width / 2
+    }
+    
+    // MARK: - Initialisators
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    func setupView() {
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private methods
+    private func setupView() {
         addSubview(circleView)
         circleView.addSubview(userImage)
         addSubview(userName)
@@ -62,11 +76,7 @@ final class LentaItem: UIView {
         setupLayout()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setupLayout() {
+    private func setupLayout() {
         
         plusView.translatesAutoresizingMaskIntoConstraints = false
         plusImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -101,11 +111,5 @@ final class LentaItem: UIView {
             plusImageView.heightAnchor.constraint(equalToConstant: 11)
         ])
         layoutSubviews()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        userImage.layer.cornerRadius = (frame.width - 24) / 2
-        plusView.layer.cornerRadius = plusView.frame.width / 2
     }
 }

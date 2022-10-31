@@ -6,9 +6,10 @@
 //
 
 import UIKit
-
+/// RecommendView - ячейка для показа рекомендаций
 final class RecommendView: UIView {
     
+    // MARK: - Visual components
     let closeIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "xmark")
@@ -43,6 +44,7 @@ final class RecommendView: UIView {
         return button
     }()
     
+    // MARK: - Initialisators
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -52,6 +54,13 @@ final class RecommendView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public methods
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        userImageView.layer.cornerRadius = userImageView.frame.width / 2
+    }
+    
+    // MARK: - Private methods
     private func setupView() {
         addSubview(closeIcon)
         addSubview(userImageView)
@@ -86,10 +95,5 @@ final class RecommendView: UIView {
             subscribeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             subscribeButton.heightAnchor.constraint(equalToConstant: 33)
         ])
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        userImageView.layer.cornerRadius = userImageView.frame.width / 2
     }
 }

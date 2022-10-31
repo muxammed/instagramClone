@@ -9,6 +9,7 @@ import UIKit
 /// PostTableViewCell таблица для поста
 final class PostTableViewCell: UITableViewCell {
     
+    // MARK: - Visual components
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postUserName: UILabel!
     @IBOutlet weak var postLikes: UILabel!
@@ -18,15 +19,16 @@ final class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var commentsEmodji: UILabel!
     @IBOutlet weak var postUserImage: UIImageView!
 
+    // MARK: - Public properties
     static let identifier = "PostTableViewCell"
     
+    // MARK: - Public methods
     static func nib() -> UINib {
         return UINib(nibName: "PostTableViewCell", bundle: nil)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     public func configure(with post: Post, user: Lenta) {
@@ -49,13 +51,5 @@ final class PostTableViewCell: UITableViewCell {
         commentsEmodji.text = post.postEmofji
         ownIcon.image = UIImage(named: user.userImage)
         postUserImage.image = UIImage(named: post.postUser.userImage)
-        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

@@ -9,14 +9,21 @@ import UIKit
 /// RecommendsTableViewCell ячейка для показа рекомендаций
 final class RecommendsTableViewCell: UITableViewCell {
 
+    // MARK: - Visual components
     @IBOutlet weak var recommendsScrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     
+    // MARK: - Public properties
     static let identifier = "RecommendsTableViewCell"
     var recommends: [Lenta] = []
     
+    // MARK: - Public methods
     static func nib() -> UINib {
         return UINib(nibName: "RecommendsTableViewCell", bundle: nil)
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
     public func configure(with recommends: [Lenta]) {
@@ -50,15 +57,4 @@ final class RecommendsTableViewCell: UITableViewCell {
             
         }
     }
-        
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
