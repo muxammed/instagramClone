@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainDetailsViewCell" customModule="InstaClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yM7-ea-jR9">
+                    <rect key="frame" x="118" y="20.5" width="283" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="69" id="B2g-ch-Buc"/>
+                    </constraints>
+                </stackView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-dc-gbn" customClass="BorderedImageView" customModule="InstaClone" customModuleProvider="target">
+                    <rect key="frame" x="5" y="5" width="100" height="100"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uBN-f8-rx7">
+                            <rect key="frame" x="3" y="3" width="94" height="94"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="94" id="oUC-e5-Rnm"/>
+                                <constraint firstAttribute="height" constant="94" id="thA-8J-End"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="47"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="EsP-fi-YFx"/>
+                        <constraint firstItem="uBN-f8-rx7" firstAttribute="centerY" secondItem="xW3-dc-gbn" secondAttribute="centerY" id="UaO-Ag-Zri"/>
+                        <constraint firstAttribute="height" constant="100" id="dhG-mH-UFn"/>
+                        <constraint firstItem="uBN-f8-rx7" firstAttribute="centerX" secondItem="xW3-dc-gbn" secondAttribute="centerX" id="tDB-Il-U0n"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRaidus">
+                            <integer key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yM7-ea-jR9" firstAttribute="leading" secondItem="xW3-dc-gbn" secondAttribute="trailing" constant="13" id="HHK-eB-bXP"/>
+                <constraint firstItem="xW3-dc-gbn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="SPb-Ma-Y1a"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xW3-dc-gbn" secondAttribute="bottom" constant="5" id="Wqz-6g-Hzi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yM7-ea-jR9" secondAttribute="trailing" constant="13" id="eeh-ZJ-pRb"/>
+                <constraint firstItem="xW3-dc-gbn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="gRz-XV-pfQ"/>
+                <constraint firstItem="yM7-ea-jR9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="t0C-BI-aff"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="informationStackView" destination="yM7-ea-jR9" id="9yx-Ib-RXi"/>
+                <outlet property="userImage" destination="uBN-f8-rx7" id="Lyr-zl-REc"/>
+                <outlet property="userImageBorder" destination="xW3-dc-gbn" id="qQT-zB-MaK"/>
+            </connections>
+            <point key="canvasLocation" x="133.33333333333334" y="-211.60714285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

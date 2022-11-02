@@ -10,4 +10,5 @@ struct Constants {
     static let plusViewBackgroundColor = "plusViewBackgroundColor"
     static let plusImageName = "plus"
     static let borderImageViewBackColor = "borderImageViewBackColor"
+    static let currentUserName = "elonmuskrus"
 }
