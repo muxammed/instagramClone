@@ -10,6 +10,13 @@
 		130F3BAD290F08BD00BB80F6 /* PhotoCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130F3BAC290F08BD00BB80F6 /* PhotoCommentCell.xib */; };
 		130F3BAF290F159300BB80F6 /* PhotoCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130F3BAE290F159300BB80F6 /* PhotoCommentCell.swift */; };
 		130F3BB2290F18C900BB80F6 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130F3BB1290F18C900BB80F6 /* ActionsViewController.swift */; };
+		131530DD29105F5000421687 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131530DC29105F5000421687 /* DetailsViewController.swift */; };
+		131530DF2910627600421687 /* MainDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131530DE2910627600421687 /* MainDetailsViewCell.swift */; };
+		131530E12910631C00421687 /* MainDetailsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131530E02910631C00421687 /* MainDetailsViewCell.xib */; };
+		131530E52910659400421687 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131530E42910659400421687 /* InformationView.swift */; };
+		131530E7291073A200421687 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131530E6291073A200421687 /* UserDetail.swift */; };
+		131530E92910942700421687 /* TextInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131530E82910942700421687 /* TextInfoViewCell.xib */; };
+		131530EB2910944600421687 /* TextInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131530EA2910944600421687 /* TextInfoViewCell.swift */; };
 		133FB069290F963300BD28D7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FB068290F963300BD28D7 /* Action.swift */; };
 		133FB06B290F976000BD28D7 /* FollowActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133FB06A290F976000BD28D7 /* FollowActionCell.xib */; };
 		133FB06D290F978600BD28D7 /* FollowActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FB06C290F978600BD28D7 /* FollowActionCell.swift */; };
@@ -33,12 +40,28 @@
 		13DB351A290361DC000D802E /* LentaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB3519290361DC000D802E /* LentaItem.swift */; };
 		13FCB53A29102F7400348E60 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13FCB53929102F7400348E60 /* Colors.xcassets */; };
 		13FCB53C29102FC800348E60 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FCB53B29102FC800348E60 /* Constants.swift */; };
+		13FDFB0129116CD5003DDD1F /* ActualsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FDFB0029116CD5003DDD1F /* ActualsViewCell.swift */; };
+		13FDFB0329116CEA003DDD1F /* ActualsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13FDFB0229116CEA003DDD1F /* ActualsViewCell.xib */; };
+		13FDFB0529116EB2003DDD1F /* ActualViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FDFB0429116EB2003DDD1F /* ActualViewCell.swift */; };
+		13FDFB0729116FFD003DDD1F /* ActualViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13FDFB0629116FFD003DDD1F /* ActualViewCell.xib */; };
+		13FDFB092911890A003DDD1F /* PhotosViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13FDFB082911890A003DDD1F /* PhotosViewCell.xib */; };
+		13FDFB0B29118BD9003DDD1F /* PhotosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FDFB0A29118BD9003DDD1F /* PhotosViewCell.swift */; };
+		13FDFB0D29119649003DDD1F /* TabItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FDFB0C29119649003DDD1F /* TabItemViewCell.swift */; };
+		13FDFB0F2911A940003DDD1F /* PhotoItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FDFB0E2911A940003DDD1F /* PhotoItemViewCell.swift */; };
+		13FDFB112911AB4C003DDD1F /* PhotoImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FDFB102911AB4C003DDD1F /* PhotoImageViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		130F3BAC290F08BD00BB80F6 /* PhotoCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCommentCell.xib; sourceTree = "<group>"; };
 		130F3BAE290F159300BB80F6 /* PhotoCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCommentCell.swift; sourceTree = "<group>"; };
 		130F3BB1290F18C900BB80F6 /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
+		131530DC29105F5000421687 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		131530DE2910627600421687 /* MainDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailsViewCell.swift; sourceTree = "<group>"; };
+		131530E02910631C00421687 /* MainDetailsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainDetailsViewCell.xib; sourceTree = "<group>"; };
+		131530E42910659400421687 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		131530E6291073A200421687 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		131530E82910942700421687 /* TextInfoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInfoViewCell.xib; sourceTree = "<group>"; };
+		131530EA2910944600421687 /* TextInfoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInfoViewCell.swift; sourceTree = "<group>"; };
 		133FB068290F963300BD28D7 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		133FB06A290F976000BD28D7 /* FollowActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowActionCell.xib; sourceTree = "<group>"; };
 		133FB06C290F978600BD28D7 /* FollowActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowActionCell.swift; sourceTree = "<group>"; };
@@ -64,6 +87,15 @@
 		13DB3519290361DC000D802E /* LentaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaItem.swift; sourceTree = "<group>"; };
 		13FCB53929102F7400348E60 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		13FCB53B29102FC800348E60 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		13FDFB0029116CD5003DDD1F /* ActualsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualsViewCell.swift; sourceTree = "<group>"; };
+		13FDFB0229116CEA003DDD1F /* ActualsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActualsViewCell.xib; sourceTree = "<group>"; };
+		13FDFB0429116EB2003DDD1F /* ActualViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualViewCell.swift; sourceTree = "<group>"; };
+		13FDFB0629116FFD003DDD1F /* ActualViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActualViewCell.xib; sourceTree = "<group>"; };
+		13FDFB082911890A003DDD1F /* PhotosViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosViewCell.xib; sourceTree = "<group>"; };
+		13FDFB0A29118BD9003DDD1F /* PhotosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewCell.swift; sourceTree = "<group>"; };
+		13FDFB0C29119649003DDD1F /* TabItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewCell.swift; sourceTree = "<group>"; };
+		13FDFB0E2911A940003DDD1F /* PhotoItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemViewCell.swift; sourceTree = "<group>"; };
+		13FDFB102911AB4C003DDD1F /* PhotoImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +114,7 @@
 			children = (
 				13467D8928FF882400C30B07 /* ViewController.swift */,
 				130F3BB1290F18C900BB80F6 /* ActionsViewController.swift */,
+				131530DC29105F5000421687 /* DetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -128,6 +161,11 @@
 				135DCC962903F558007D281F /* LentaTableViewCell.xib */,
 				130F3BAC290F08BD00BB80F6 /* PhotoCommentCell.xib */,
 				133FB06A290F976000BD28D7 /* FollowActionCell.xib */,
+				131530E02910631C00421687 /* MainDetailsViewCell.xib */,
+				131530E82910942700421687 /* TextInfoViewCell.xib */,
+				13FDFB0229116CEA003DDD1F /* ActualsViewCell.xib */,
+				13FDFB0629116FFD003DDD1F /* ActualViewCell.xib */,
+				13FDFB082911890A003DDD1F /* PhotosViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -144,6 +182,15 @@
 				138164382906617C007F748D /* RecommendView.swift */,
 				130F3BAE290F159300BB80F6 /* PhotoCommentCell.swift */,
 				133FB06C290F978600BD28D7 /* FollowActionCell.swift */,
+				131530DE2910627600421687 /* MainDetailsViewCell.swift */,
+				131530E42910659400421687 /* InformationView.swift */,
+				131530EA2910944600421687 /* TextInfoViewCell.swift */,
+				13FDFB0029116CD5003DDD1F /* ActualsViewCell.swift */,
+				13FDFB0429116EB2003DDD1F /* ActualViewCell.swift */,
+				13FDFB0A29118BD9003DDD1F /* PhotosViewCell.swift */,
+				13FDFB0C29119649003DDD1F /* TabItemViewCell.swift */,
+				13FDFB0E2911A940003DDD1F /* PhotoItemViewCell.swift */,
+				13FDFB102911AB4C003DDD1F /* PhotoImageViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +202,7 @@
 				135DCC992904190F007D281F /* Lenta.swift */,
 				133FB068290F963300BD28D7 /* Action.swift */,
 				13FCB53B29102FC800348E60 /* Constants.swift */,
+				131530E6291073A200421687 /* UserDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,11 +270,16 @@
 				13467D9228FF882800C30B07 /* LaunchScreen.storyboard in Resources */,
 				13467D8F28FF882800C30B07 /* Assets.xcassets in Resources */,
 				1381643729066005007F748D /* RecommendsTableViewCell.xib in Resources */,
+				13FDFB0329116CEA003DDD1F /* ActualsViewCell.xib in Resources */,
+				13FDFB0729116FFD003DDD1F /* ActualViewCell.xib in Resources */,
+				131530E12910631C00421687 /* MainDetailsViewCell.xib in Resources */,
+				131530E92910942700421687 /* TextInfoViewCell.xib in Resources */,
 				13467D8D28FF882400C30B07 /* Main.storyboard in Resources */,
 				130F3BAD290F08BD00BB80F6 /* PhotoCommentCell.xib in Resources */,
 				135DCC942903F122007D281F /* PostTableViewCell.xib in Resources */,
 				133FB06B290F976000BD28D7 /* FollowActionCell.xib in Resources */,
 				135DCC982903F559007D281F /* LentaTableViewCell.xib in Resources */,
+				13FDFB092911890A003DDD1F /* PhotosViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,18 +312,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				130F3BB2290F18C900BB80F6 /* ActionsViewController.swift in Sources */,
+				131530E7291073A200421687 /* UserDetail.swift in Sources */,
 				13FCB53C29102FC800348E60 /* Constants.swift in Sources */,
 				1381643629066005007F748D /* RecommendsTableViewCell.swift in Sources */,
+				13FDFB0B29118BD9003DDD1F /* PhotosViewCell.swift in Sources */,
+				13FDFB0129116CD5003DDD1F /* ActualsViewCell.swift in Sources */,
 				133FB06D290F978600BD28D7 /* FollowActionCell.swift in Sources */,
 				135DCC972903F558007D281F /* LentaTableViewCell.swift in Sources */,
+				13FDFB0F2911A940003DDD1F /* PhotoItemViewCell.swift in Sources */,
+				131530E52910659400421687 /* InformationView.swift in Sources */,
 				1381643329061AAE007F748D /* BorderedImageView.swift in Sources */,
+				13FDFB112911AB4C003DDD1F /* PhotoImageViewCell.swift in Sources */,
 				13467D8A28FF882400C30B07 /* ViewController.swift in Sources */,
 				13467D8628FF882400C30B07 /* AppDelegate.swift in Sources */,
 				135DCC9A2904190F007D281F /* Lenta.swift in Sources */,
+				13FDFB0D29119649003DDD1F /* TabItemViewCell.swift in Sources */,
 				13467D8828FF882400C30B07 /* SceneDelegate.swift in Sources */,
+				13FDFB0529116EB2003DDD1F /* ActualViewCell.swift in Sources */,
 				138164392906617C007F748D /* RecommendView.swift in Sources */,
+				131530DD29105F5000421687 /* DetailsViewController.swift in Sources */,
 				130F3BAF290F159300BB80F6 /* PhotoCommentCell.swift in Sources */,
 				13DB351A290361DC000D802E /* LentaItem.swift in Sources */,
+				131530DF2910627600421687 /* MainDetailsViewCell.swift in Sources */,
+				131530EB2910944600421687 /* TextInfoViewCell.swift in Sources */,
 				13816431290611DF007F748D /* UIView+BezierPathBorder.swift in Sources */,
 				13CE156829034CB300CA94A5 /* Post.swift in Sources */,
 				133FB069290F963300BD28D7 /* Action.swift in Sources */,

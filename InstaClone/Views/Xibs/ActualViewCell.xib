@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ActualViewCell" customModule="InstaClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Key-iP-I5s">
+                    <rect key="frame" x="5" y="5" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Key-iP-I5s" secondAttribute="height" multiplier="1:1" id="oIZ-KK-jbc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="45"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMW-Yu-8Rg">
+                    <rect key="frame" x="5" y="95" width="90" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Key-iP-I5s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="5hN-B6-vEc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Key-iP-I5s" secondAttribute="trailing" constant="5" id="Gfk-0d-0b4"/>
+                <constraint firstItem="nMW-Yu-8Rg" firstAttribute="top" secondItem="Key-iP-I5s" secondAttribute="bottom" id="MOK-DX-lPK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nMW-Yu-8Rg" secondAttribute="trailing" constant="5" id="eY6-Vr-cdi"/>
+                <constraint firstItem="nMW-Yu-8Rg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="mf6-52-JVc"/>
+                <constraint firstItem="Key-iP-I5s" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="sbZ-As-2IQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nMW-Yu-8Rg" secondAttribute="bottom" constant="2" id="t9X-9g-Vfq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="actualImageView" destination="Key-iP-I5s" id="qhQ-5F-dY6"/>
+                <outlet property="actualNameLabel" destination="nMW-Yu-8Rg" id="Io8-eZ-Rca"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="228.68303571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
